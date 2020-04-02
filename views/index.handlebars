@@ -1,38 +1,52 @@
-<h1>Tasty Burgers!</h1>
-
-<h2>Burgers you want to try!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#unless eaten}}
-    {{> burgers/burger-block eaten=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers you have eaten!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if eaten}}
-    {{> burgers/burger-block eaten=false}}
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Make a dream burger!</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="ca" name="name">
+<div class="row">
+    <div class="jumbotron col" align="center">
+        <h1>Burger Boys Burgers!</h1>
     </div>
+</div>
+<div class="row justify-content-md-center">
+    <div class='col-sm-9 col-md-5 burgCols pt-2' id='left-col' align='center'>
+        <h2>Burgers you want to try!</h2>
 
-    <div class="form-group">
-        <label for="eaten">Eaten?</label><br>
-        <input type="radio" name="eaten" value="1" checked> Eaten!<br>
-        <input type="radio" name="eaten" value="0"> I want to try!
+
+        <ul>
+            {{#each burgers}}
+            {{#unless eaten}}
+            {{> burgers/burger-block eaten=true}}
+            {{/unless}}
+            {{/each}}
+        </ul>
     </div>
+    <div class="col-1 p-0 "></div>
 
-    <button type="submit">Add Burger</button>
-</form>
+    <div class='col-sm-9 col-md-5  burgCols pt-2' id='right-col' align="center">
+        <h2>Burgers you have eaten!</h2>
+
+        <ul>
+            {{#each burgers}}
+            {{#if eaten}}
+            {{> burgers/burger-block eaten=false}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="row justify-content-md-center pt-5">
+    <div class="col-sm-5 burgCols pt-2 pb-2" align='center'>
+        <h2>Make a dream burger!</h2>
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="ca">Burger Name:</label>
+                <input type="text" id="ca" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="eaten">Eaten?</label><br>
+                <input type="radio" name="eaten" value="1" checked> Eaten!<br>
+                <input type="radio" name="eaten" value="0"> I want to try!
+            </div>
+
+            <button type="submit">Add Burger</button>
+        </form>
+    </div>
+</div>

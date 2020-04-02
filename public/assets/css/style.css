@@ -1,7 +1,16 @@
+body {
+  background: url(https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  list-style-type: none;
 }
 
 .label {
@@ -11,9 +20,23 @@ li {
 .create-update-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
 }
 
 .form-group {
   margin-bottom: 5px;
+}
+
+.burgCols {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .burgCols {
+    margin-left: 20px;
+    margin-right: 5px;
+  }
+  #right-col {
+    margin-top: 10px;
+  }
 }
